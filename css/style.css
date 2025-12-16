@@ -2,6 +2,8 @@ body {
   background-color: #3498db;
 }
 
+/* 3498DB, 412065, 175648, B1A061, E9E3D9 */
+
 #container1 {
   display: grid;
   height: 100vh;
@@ -67,6 +69,9 @@ header {
   border-radius: 17px;
   padding: 8px 20px;
   margin-bottom: 10px;
+  font-family: "Delius Swash Caps", cursive;
+  font-weight: 400;
+  font-style: normal;
 }
 
 
@@ -81,7 +86,7 @@ header p {
   display: flex;
   justify-content: center;
   gap: 25px;
-  margin: 5px 0 0 0;
+  margin: 5px 9% 0 0;
   padding: 0;
 }
 
@@ -90,12 +95,17 @@ header a {
   color: white;
   text-decoration: none;
   font-weight: bold;
+
+}
+
+header a:visited{
+color: rgb(172, 116, 224);
 }
 
 header h1 {
   grid-area: title;
   justify-self: center;
-  margin: 0;
+  margin-right: 9%;
 }
 
 
@@ -106,6 +116,9 @@ main {
   border-radius: 17px;
   margin-right: 10px;
   margin-bottom: 10px;
+  font-family: "Delius Swash Caps", cursive;
+  font-weight: 400;
+  font-style: normal;
 }
 
 nav {
@@ -114,15 +127,24 @@ nav {
   grid-area: nav;
   background-color: brown;
   border-radius: 17px;
+  font-family: "Delius Swash Caps", cursive;
+  font-weight: 400;
+  font-style: normal;
+  flex-direction: column;
 }
 
 footer {
-  padding-left: 15px;
   padding-top: 50px;
   grid-area: ft;
   background-color: yellowgreen;
   border-radius: 17px;
   margin-right: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  font-family: "Delius Swash Caps", cursive;
+  font-weight: 400;
+  font-style: normal;
 }
 
 /* 3498db */
@@ -152,9 +174,15 @@ section {
   border-radius: 20px;
   margin: 2%;
   align-self: center;
-  transition: transform 0.35s;
+  transition: transform 0.25s;
 }
 
 .cards:hover {
   transform: scale(1.25);
+}
+
+#påfågel {
+  width: 90%;
+  border-radius: 20px;
+  justify-self: center;
 }
