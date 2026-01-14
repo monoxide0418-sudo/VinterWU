@@ -43,38 +43,34 @@ body {
 
 #logo {
   grid-area: logo;
-  grid-row: 1 / -1;     
-  align-self: center;   
+  grid-row: 1 / -1;
+  align-self: center;
   justify-self: start;
 
   height: 150px;
-  width: 150px;       
+  width: 150px;
   object-fit: contain;
 
-  display: block;      
-  margin: 0;            
+  display: block;
+  margin: 0;
 }
-
-
 
 header {
   display: grid;
   grid-template-columns: auto 1fr auto;
-  grid-template-rows: 1fr auto;   /* ⬅ key change */
+  grid-template-rows: 1fr auto; /* ⬅ key change */
   grid-template-areas:
     "logo title ."
     ".    links .";
   align-items: center;
   grid-area: hd;
   background-color: #5b7553;
-  border-radius: 17px;
   padding: 8px 20px;
   margin-bottom: 10px;
   font-family: "Delius Swash Caps", cursive;
   font-weight: 400;
   font-style: normal;
 }
-
 
 .title {
   display: flex;
@@ -91,17 +87,16 @@ header p {
   padding: 0;
 }
 
-
 a {
   width: 150px;
-  
-  color:  #bff0d4 ;
+
+  color: #bff0d4;
   text-decoration: none;
   font-weight: bold;
 
-margin-top: 15px;
+  margin-top: 15px;
 
-  background-color: rgb(33, 97, 42) ;
+  background-color: rgb(33, 97, 42);
   border: none;
   padding: 15px 32px;
   text-align: center;
@@ -113,10 +108,9 @@ margin-top: 15px;
   transition: transform 0.25s;
 }
 
-a:hover{
-    transform: scale(1.1);
+a:hover {
+  transform: scale(1.1);
 }
-
 
 header h1 {
   grid-area: title;
@@ -124,18 +118,14 @@ header h1 {
   margin-right: 9%;
 }
 
-
 main {
   padding: 15px;
   grid-area: mn;
   background-color: #003559;
-  border-radius: 17px;
-  margin-right: 10px;
   margin-bottom: 10px;
-  font-family: "Sansita", sans-serif;
+  font-family: "Sansation", sans-serif;
   font-weight: 400;
   font-style: normal;
-
 }
 
 nav {
@@ -143,27 +133,24 @@ nav {
   display: flex;
   grid-area: nav;
   background-color: #003559;
-  border-radius: 17px;
-    font-family: "Sansita", sans-serif;
+  font-family: "Sansation", sans-serif;
   font-weight: 400;
   font-style: normal;
   align-items: center;
   flex-direction: column;
+  margin-left: 10px;
 }
 
 footer {
   padding-top: 50px;
   grid-area: ft;
   background-color: #5b7553;
-  border-radius: 17px;
-  margin-right: 10px;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-   font-family: "Sansita", sans-serif;
+  font-family: "Sansation", sans-serif;
   font-weight: 400;
   font-style: normal;
-
 }
 
 /* 3498db */
@@ -186,12 +173,10 @@ section {
   justify-content: center;
 }
 
-.cards {
+.cards img {
+  position: relative;
   display: flex;
-  width: 50%;
-  height: 90%;
   border-radius: 20px;
-  margin: 2%;
   align-self: center;
   transition: transform 0.25s;
 }
@@ -207,6 +192,41 @@ section {
   justify-self: center;
 }
 
-p, h1, h2{
-  color:  #bff0d4;
+p,
+h1,
+h2,
+h3 {
+  color: #bff0d4;
+}
+
+.card-text {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.705);
+  color: white;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-left: 17px;
+  padding-right: 17px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+
+  pointer-events: none;
+  visibility: hidden;
+  z-index: 1;
+}
+
+.cards:hover .card-text {
+  opacity: 1;
+  visibility: visible;
+}
+
+.cards img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
 }
